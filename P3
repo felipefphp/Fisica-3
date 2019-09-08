@@ -1,0 +1,91 @@
+\documentclass[aps,prb,onecolumn,reprint]{revtex4-1}
+\usepackage{amsmath}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{booktabs}
+%\usepackage[mathlines]{lineno}
+%\linenumbers\relax 
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{scalefnt}
+
+\begin{document}
+\title{Prática 3 - Circuitos RC.}
+\author{Física - Bacharelado \\ Felipe Alisson Costa Alves - 471283 \\ Laura Claidy da Silva Machado - 418909 \\ Sabrina da Silva Sa - 399057 }
+\affiliation{Prof. Alejandro Pedro Ayala - Física III}
+\date{5 de setembro de 2019}
+
+
+\begin{abstract}
+    A prática consistiu na verificação experimental da teoria dos circuitos com resistores e capacitores (RC). Através de malhas com resistores e capacitores em série buscou-se valores caracteristicos a cada configuração. Ao mesmo modo, investigou-se qualitativamente a energia armazeada nos capacitores e seus tempos de carga e descarga.  As variáveis chaves de nossa análise foram a tensão, o tempo e as resistências.
+    
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+Nessa prática utilizou-se, em essência duas configurações:\\
+ (I)Fonte de tensão + Capacitor + Resistor\\
+ (II)Capacitor + Resistor 
+ 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=4cm]{RC carga.png}
+    \caption{Descarga do capacitor}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=4cm]{RC descarga.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+ Para o pleno entendimento dos fenomenos analisados é fundamental lembrar as equações fundamentais de resistores e capacitores.\\
+
+
+ Resistor
+\begin{equation}
+    V=Ri.
+\end{equation}
+Onde V representa a diferença de potêncial entre os extremos do resistor, R é sua constante caracteristica (dependente do material e da geometria) e I é a corrente que o artravessa. Vale  lembrar aqui, ademais, que a corrente representa a derivada da carga em relação ao tempo, representada na forma abaixo:
+
+\begin{equation}
+    i=\frac{dQ}{dt}.
+\end{equation}
+Capacitor
+\begin{equation}
+    Q=CV.
+\end{equation}
+Onde Q representa o módulo da carga armazenada em cada placa do capacitor, C representa a constante caracteristica do capacitor, a depender do material usado entre as placas e da geometria das mesmas, e V é a diferença de potencial entre as placas.
+
+De posse das informações sobre os elementos do nosso circuito utilizamos a lei das malhas de kirchhoff para encontrar a equação diferencial caracteristica dos circuitos RC 
+
+\begin{equation}
+    \varepsilon=\frac{Q}{C}+R\frac{dQ}{dt}
+\end{equation}
+Que tem por solução:
+\begin{equation}
+   V(t)=\frac{Q(t)}{C}=\varepsilon\Big(1-\Big {e}^\frac{-t}{RC}\Big) 
+\end{equation}
+
+Para a situação de descarga do capacitor, que significa igualar a diferença de potencial da fonte a zero na equação (4), temos que a equação da diferença de potencial na descarga do capacitor é dada por:
+
+\begin{equation}
+    V(t)=V_{0}e^{\frac{-t}{RC}}
+\end{equation}
+
+
+
+
+
+
+
+\end{document}
